@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .scrollbar-dropdown {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.violet.300') transparent;
+  }
+
+  .scrollbar-dropdown::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-dropdown::-webkit-scrollbar-thumb {
+    background-color: theme('colors.violet.300');
+    border-radius: 9999px;
+  }
+}
