@@ -72,6 +72,16 @@ function App() {
         <FSC />
         <FSC letter />
       </div>
+
+      <div className={classes.dropdownContainer}>
+        <div className={classes.title}>Dropdown</div>
+        <Dropdown
+          options={dropdownOptions}
+          selectedId={selected}
+          onSelect={setSelected}
+        />
+      </div>
+
       <div className={classes.moodletContainer}>
         <div className={classes.title}>Moodlet</div>
         <div className={classes.grid}>
@@ -237,26 +247,17 @@ function App() {
           </div>
         </div>
       </div>
-
-      <div className={classes.dropdownContainer}>
-        <div className={classes.title}>Dropdown</div>
-        <Dropdown
-          options={dropdownOptions}
-          selectedId={selected}
-          onSelect={setSelected}
-        />
-      </div>
     </div>
   );
 }
 
 const classes = {
-  container: "flex flex-wrap p-5 pb-0",
-  FscContainer: "w-3/12 min-w-30 flex flex-col gap-5",
-  moodletContainer: "w-5/12 min-w-150",
-  dropdownContainer: "w-3/12 min-w-80",
-  title: "text-lg font-bold pb-10",
-  grid: "grid gap-2 p-10",
+  container: "flex flex-wrap gap-y-5 p-5 pb-0",
+  FscContainer: "w-full md:w-1/2 flex flex-col gap-5",
+  dropdownContainer: "w-full md:w-1/2",
+  moodletContainer: "w-full",
+  title: "text-lg font-bold",
+  grid: "grid gap-2 py-10",
   itemContentOptions: "grid grid-cols-6 items-center",
   contentOption: "flex flex-col items-center gap-2",
   item: "grid grid-cols-3 items-center gap-5 p-2 border-y border-gray-300",
